@@ -1,3 +1,5 @@
+
+
 '''Construção de um sistema bancário. Desafio de projeto da dio.me'''
 
 menu = """
@@ -10,7 +12,7 @@ menu = """
 
 saldo = 0
 limite = 500
-extrato = ""
+extrato = " "
 num_saque = 0
 LIMITE_SAQUES = 3
 
@@ -22,7 +24,7 @@ while True:
 
         if valor > 0:
             saldo += valor
-            extrato += f"Depósito: R$ {valor:.2f}\n"
+            extrato += f"Depósito: R${valor:.2f}\n"
 
         else:
             print("Operação falhou !    O valor informado é inválido.")
@@ -47,6 +49,7 @@ while True:
         elif valor > 0:
             saldo -= valor
             extrato += f"Saque: R$ {valor:.2f}\n"
+            num_saque += 1
 
         else:
             print("Operação falhou ! O valor informado é inválido.")
